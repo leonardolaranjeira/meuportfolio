@@ -4,6 +4,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
 
+/* CSS - Global Settings */
+
 * {
     margin: 0;
     padding: 0;
@@ -24,8 +26,31 @@ body {
     color: var(--destaque);
 }
 
+html {
+    font-size: 16px;
+}
+
+h1 {
+    font-family: "Merriweather", serif;
+    font-size: 37px;
+    color: var(--cor-titulo);
+    font-weight: 500;
+    text-rendering: optimizeLegibility;
+}
+
+p {
+    font-family: "Open Sans", sans-serif;
+    text-align: justify;
+    text-indent: 30px;
+    color: var(--cor-fonte);
+    font-size: 22px;
+}
+
+/* Header Style */
+
 header {
     display: flex;
+    background-color: var(--cor-fundo);
     align-items: center;
     padding: 0px 30px;
     height: 8vh;
@@ -36,12 +61,9 @@ header {
 
 #perfil {
     display: flex;
-    gap: 10px;
     padding-right: 15px;
     border-radius: 25px 25px;
-    background-color: var(--cor-fundo);
-    color: var(--cor-titulo);
-    font-weight: bolder;
+    background-color: var(--cor-fundo); /* Manutenção */
     align-items: center;
 }
 #perfil > img {
@@ -54,6 +76,9 @@ header {
 #perfil span {
     font-family: "Open Sans", sans-serif;
     font-size: 15px;
+    margin-left: 10px;
+    font-weight: bolder;
+    color: var(--cor-titulo);
 }
 
 #menu {
@@ -79,35 +104,77 @@ header {
     transform: translateY(-3px);
 }
 
+ /* Main Styles */
+
 main {
     display: grid;
-    height: 84vh;
-    grid-template-columns: auto 90vw auto;
+    grid-template-columns: 1fr 90vw 1fr;
+    width: 100%;
+    gap: 20px;
 }
-main section {
+
+#apresentacao {
     grid-column: 2 / 3;
+    margin: 20px 0px 50px 0px;
 }
 main h3 {
-    margin-top: 20px;
     font-size: 19px;
 }
-main h1 {
-    font-family: "Merriweather", serif;
-    font-size: 40px;
-    color: var(--cor-titulo);
-    font-weight: bolder;
+#apresentacao h1 {
     margin-top: 10px;
 }
-main p {
-    font-family: "Open Sans", sans-serif;
-    color: var(--cor-fonte);
-    font-size: 24px;
+#apresentacao p {
     margin-top: 10px;
+    font-weight: 300;
 }
 
 #projetos {
-    display: grid;
+    grid-column: 2 / 3;
+    margin-bottom: 100px;
 }
+
+#habilidades {
+    display: grid;
+    grid-column: 2 / 3;
+    gap: 10px;
+}
+.skill-container {
+    display: grid;
+    gap: 10px;
+    background-color: var(--cor-off-fundo);
+    font-family: "Open Sans", sans-serif;
+    color: var(--cor-titulo);
+    font-size: 14px;
+    border-radius: 10px;
+    padding: 20px;
+    font-weight: 600;
+}
+#habilidades .info {
+    display: flex;
+    justify-content: space-between;
+}
+.barra {
+    width: 100%;
+    background-color: var(--borda);
+    border-radius: 5px;
+}
+.barra .progresso {
+    height: 10px;
+    border-radius: 5px;
+    background-color: var(--destaque);
+}
+
+#formacao {
+    grid-column: 2 / 3;
+    margin-bottom: 100px;
+}
+
+#contatos {
+    grid-column: 2 / 3;
+    margin-bottom: 100px;
+}
+
+/* Footer Style */
 
 footer {
     width: 100%;
@@ -120,6 +187,8 @@ footer hr {
     width: 100%;
 }
 footer p {
+    font-size: 1em;
+    text-align: center;
     padding-top: 20px;
     color: var(--cor-fonte);
 }
