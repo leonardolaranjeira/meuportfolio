@@ -142,7 +142,7 @@ main {
 #habilidades {
     display: grid;
     grid-column: 2 / 3;
-    gap: 10px;
+    gap: 20px;
 }
 .skill-container {
     display: grid;
@@ -173,16 +173,23 @@ main {
 #formacao {
     display: grid;
     grid-column: 2 / 3;
-    gap: 10px;
+    gap: 20px;
 }
 #formacoes-container {
     display: grid;
-    gap: 10px;
+    gap: 15px;
 }
 .formacao-item {
     background-color: var(--cor-off-fundo);
+    border-left: 7px solid var(--destaque);
     padding: 20px;
     border-radius: 10px;
+    transition: border-left-width 0.5s ease-out, transform 0.5s ease-out, box-shadow 0.5s ease-out;
+}
+.formacao-item:hover {
+    border-left: 12px solid var(--destaque);
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 .formacao-item h2 {
     font-family: "Merriweather", serif;
@@ -199,6 +206,7 @@ main {
 .formacao-item p {
     font-family: "Open Sans", sans-serif;
     text-align: justify;
+    hyphens: auto;
     text-indent: 30px;
     color: var(--cor-fonte);
     font-size: 16px;
