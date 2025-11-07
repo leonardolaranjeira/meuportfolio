@@ -271,6 +271,7 @@ main {
 }
 #formulario-container {
     border: 1px solid var(--borda);
+    border-radius: 10px;
     margin-bottom: 20px;
 }
 #top-bar {
@@ -283,6 +284,7 @@ main {
 }
 #formulario {
     background-color: var(--cor-off-fundo);
+    border-radius: 0px 0px 10px 10px;
     border-top: 1px solid var(--borda);
     padding: 50px 40px 50px 40px;
 }
