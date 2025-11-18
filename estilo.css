@@ -187,10 +187,55 @@ main {
     gap: 20px;
 }
 #projeto-container {
-    padding: 200px;
     background-color: var(--cor-off-fundo);
-    border: 2px dashed green;
+    border: 2px solid var(--borda);
     border-radius: 10px;
+}
+.imagem-projeto {
+    object-fit: cover;
+    overflow: hidden;
+}
+.imagem-projeto img {
+    border-radius: 10px 10px 0px 0px;
+    border-bottom: 2px solid var(--borda);
+    width: 100%;
+}
+.info-projeto {
+    display: flex;
+    flex-direction: column;
+    font-family: "Open Sans", sans-serif;
+    background-color: var(--cor-off-fundo);
+    border-radius: 0px 0px 10px 10px;
+    padding: 20px;
+    gap: 10px;
+}
+.info-projeto h2 {
+    text-align: left;
+    font-family: "Open Sans", sans-serif;
+}
+.info-projeto .links {
+    display: flex;
+    gap: 20px;
+}
+.links a {
+    transition: background-color 0.1s ease-out, transform 0.1s ease-out;
+}
+.links a:active {
+    color: var(--cor-titulo);
+    transform: scale(0.98);
+}
+.info-projeto p {
+    font-size: 1rem;
+}
+.info-projeto span {
+    display: inline-block;
+    background-color: var(--borda);
+    font-size: 1rem;
+    color: var(--cor-titulo);
+    border: 1px solid var(--cor-titulo);
+    border-radius: 20px;
+    padding: 5px;
+    margin: 20px 0px 0px 10px;
 }
 
 #habilidades {
@@ -388,7 +433,7 @@ footer {
     font-family: "Open Sans", sans-serif;
     text-align: center;
     border-top: 1px solid var(--borda);
-    padding: 20px;
+    padding: 10px 20px 20px 20px;
 }
 #icones {
     display: flex;
@@ -399,6 +444,10 @@ footer {
     color: var(--cor-titulo);
     gap: 20px;
     transition: background-color 0.1s ease-out, transform 0.1s ease-out;
+}
+#icones a {
+    padding: 8px; 
+    border-radius: 50%; 
 }
 #icones a:active {
     background-color: var(--cor-off-fundo);
@@ -413,14 +462,8 @@ footer p {
 }
 
 @media screen and (min-width: 768px) {
-    header, main, footer {
-        max-width: 900px;
-    }
-}
-
-@media screen and (min-width: 1200px) {
-    header, main, footer {
-        max-width: 1200px;
+    main {
+        grid-template-columns: auto 1fr auto;
     }
 }
 
