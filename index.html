@@ -12,19 +12,18 @@
 <body>
     <header>
         <nav id="menu">
-            <a href="#">
+            <a href="#" aria-label="Voltar para o topo da página">
                 <div id="perfil">
                     <img src="img/minhafoto.jpeg" alt="Foto de perfil">
                     <span>Leonardo Laranjeira</span>
                 </div>
             </a>
             <ul>
-                <!--<li><a href="#projetos"></a></li>
-                <li><a href="#experiencia"></a></li>
-                <li><a href="#formacao"></a></li>
-                <li><a href="#contatos"></a></li>-->
-                <li><a href="#"><i class="fa-solid fa-bars"></i></a></li>
-                <li><a href="#" id="botao-tema"><i class="fa-solid fa-palette"></i></a></li>
+                <li><button type="button" id="bars_menu" 
+                aria-controls="menu-lateral" 
+                aria-expanded="false"><i class="fa-solid fa-bars"></i>
+                </button></li>
+                <li><button href="#" id="botao_tema"><i class="fa-solid fa-palette"></i></button></li>
             </ul>
         </nav>
     </header>
@@ -325,9 +324,21 @@
             <h1 id="tit-cert">
                 <i class="fa-solid fa-award"></i> Certificações
             </h1>
-            <aside>
-                
-            </aside>
+
+            <div class="slider-container">
+                <div class="slider-track">
+                    <aside class="slide">
+                        <div class="certificado">
+                            <img src="img/mund1-python3.png" alt="Certificação Python 3">
+                        </div>
+                        <div class="info-cert">
+                            <h2>PYTHON 3 - MUNDO 1</h2>
+                            <p>Este curso foi dedicado a ter os meus primeiros contatos com a programação. Estudei lógica de programação baseada em python.</p>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+            
             <div class="icones-opc">
                 <span class="anterior"><i class="fa-solid fa-arrow-left"></i></span>
                 <div class="opcoes">

@@ -1,0 +1,53 @@
+<section id="certificacoes">
+    <h1 id="tit-cert">
+        <i class="fa-solid fa-award"></i> Certificações
+    </h1>
+    <aside>
+        <div class="certificado">
+            <img src="img/mund1-python3.png" alt="Certificação Python 3">
+        </div>
+        <div class="info-cert">
+            <h2>PYTHON 3 - MUNDO 1</h2>
+            <p>Este curso foi dedicado a ter os meus primeiros contatos com a programação. Estudei lógica de programação baseada em python.</p>
+        </div>
+    </aside>
+    <div class="icones-opc">
+        <span class="anterior"><i class="fa-solid fa-arrow-left"></i></span>
+        <div class="opcoes">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <span class="proximo"><i class="fa-solid fa-arrow-right"></i></span>
+    </div>
+</section>
+
+#certificacoes {
+    display: grid;
+    grid-column: 2 / 3;
+    gap: 10px;
+}
+.certificado {
+    display: grid;
+    gap: 10px;
+    object-fit: cover;
+    overflow: hidden;
+}
+.certificado img {
+    border-radius: 10px;
+    border-bottom: 2px solid var(--borda);
+    width: 100%;
+}
+.info-cert {
+    display: grid;
+    padding: 10px;
+    gap: 10px;
+}
+.info-cert h2 {
+    text-align: left;
+    font-size: 18px;
+    font-family: "Open Sans", sans-serif;
+}
+.info-cert p {
+    font-size: 1rem;
+}

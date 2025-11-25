@@ -112,8 +112,9 @@ header {
     display: flex;
     gap: 30px;
 }
-#menu > ul > li > a {
+#menu > ul > li > button {
     display: inline-block;
+    background-color: var(--cor-fundo);
     font-size: 20px;
     text-decoration: none;
     color: var(--cor-fonte);
@@ -121,7 +122,7 @@ header {
     border-radius: 50%; 
     transition: background-color 0.1s ease-out, transform 0.1s ease-out;
 }
-#menu > ul > li > a:active {
+#menu > ul > li > button:active {
     background-color: var(--cor-off-fundo);
     color: var(--cor-titulo);
     transform: scale(0.98);
@@ -277,16 +278,14 @@ main {
     max-height: 5px;
     gap: 10px;
 }
-.opcoes span {
-    background-color: var(--cor-off-fundo);
+.icones-opc .opcoes span {
+    display: block;
+    width: 10px;
+    height: 10px;
+    padding: 7px;
+    background-color: var(--cor-fonte);
     border-radius: 50%;
-    padding: 8px;
-}
-
-#certificacoes {
-    display: grid;
-    grid-column: 2 / 3;
-    gap: 10px;
+    transition: background-color 0.3s;
 }
 
 #habilidades {
@@ -356,6 +355,69 @@ main {
     text-indent: 30px;
     color: var(--cor-fonte);
     font-size: 16px;
+}
+
+#certificacoes {
+    display: grid;
+    grid-column: 2 / 3;
+    gap: 10px;
+}
+#certificacoes .slider-container {
+    overflow: hidden;
+}
+#certificacoes .slider-track {
+    display: flex;
+    width: auto;
+    transition: transform 0.5s ease;
+}
+#certificacoes .slide {
+    display: grid;
+    gap: 10px;
+    width: 100%;
+    flex-shrink: 0;
+}
+.certificado {
+    display: grid;
+    gap: 10px;
+}
+.certificado img {
+    border-radius: 10px;
+    border-bottom: 2px solid var(--borda);
+    width: 100%;
+}
+.info-cert {
+    display: grid;
+    padding: 10px;
+    gap: 10px;
+}
+.info-cert h2 {
+    text-align: left;
+    font-size: 18px;
+    font-family: "Open Sans", sans-serif;
+}
+.info-cert p {
+    font-size: 1rem;
+}
+.icones-opc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+.icones-opc .opcoes {
+    display: flex;
+    gap: 10px;
+}
+.icones-opc .opcoes span {
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: var(--cor-fonte);
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+.icones-opc .opcoes span.active {
+    background-color: var(--destaque);
 }
 
 #experiencia {
