@@ -172,7 +172,7 @@ main {
 }
 #curriculo p {
     text-indent: 0px;
-    font-size: 1em;
+    font-size: 18px;
 }
 #curriculo a {
     background-color: var(--destaque);
@@ -181,7 +181,6 @@ main {
     border-radius: 10px;
     text-align: center;
     padding: 15px;
-    width: 160px;
     color: var(--cor-titulo);
     transition: background-color 0.1s ease-out, transform 0.1s ease-out;
 }
@@ -216,8 +215,8 @@ main {
     background-color: var(--cor-off-fundo);
     border-radius: 0px 0px 10px 10px;
     hyphens: auto;
-    padding: 20px;
-    gap: 10px;
+    padding: 15px;
+    gap: 6px;
 }
 .info-projeto h2 {
     text-align: left;
@@ -228,9 +227,13 @@ main {
     display: flex;
     gap: 20px;
 }
+.links a {
+    color: var(--cor-titulo);
+}
 .tit-projeto {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     gap: 5px;
 }
 #dificuldade {
@@ -251,16 +254,32 @@ main {
 }
 .info-projeto p {
     font-size: 1rem;
+    hyphens: auto;
 }
-.info-projeto span {
+.rodape {
+    display: flex;
+    flex-direction: column;
+}
+.tools {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    margin: 6px 0px 6px 0px;
+}
+.rodape span {
     display: inline-block;
     background-color: var(--cor-fonte);
-    font-size: 14px;
+    font-size: 10px;
     color: var(--cor-titulo);
     border: 2px solid var(--borda);
     border-radius: 20px;
     padding: 6px;
-    margin: 20px 0px 0px 10px;
+}
+.rodape h3 {
+    font-family: "Merriweather", serif;
+    align-self: flex-end;
+    font-size: 14px;
+    color: var(--destaque);
 }
 .icones-opc {
     display: flex;
@@ -348,13 +367,13 @@ main {
 }
 .formacao-item h2 {
     font-family: "Merriweather", serif;
-    font-size: 14px;
+    font-size: 16px;
     text-align: left;
     color: var(--cor-titulo);
 }
 .formacao-item h3 {
     font-family: "Merriweather", serif;
-    font-size: 14px;
+    font-size: 12px;
     text-align: left;
     color: var(--destaque);
 }
@@ -407,17 +426,17 @@ main {
 }
 .info-cert h2 {
     text-align: left;
-    font-size: 18px;
+    font-size: 16px;
     font-family: "Open Sans", sans-serif;
 }
 .info-cert p {
-    font-size: 1rem;
-    word-wrap: break-word;
+    font-size: 14px;
+    hyphens: auto;
 }
 .info-cert span {
     display: flex;
     justify-content: flex-end;
-    font-size: 1rem;
+    font-size: 14px;
 }
 .icones-opc {
     display: flex;
@@ -474,7 +493,7 @@ main {
 }
 .exp-item h2 {
     font-family: "Merriweather", serif;
-    font-size: 14px;
+    font-size: 16px;
     text-align: left;
     color: var(--cor-titulo);
 }
