@@ -11,11 +11,8 @@
  */
 
 document.getElementById('perfil').addEventListener('click', function() {
-    // 1. Usa o método scrollTo para rolar a janela (window)
     window.scrollTo({
-        // Define o topo (0) como a posição de destino
         top: 0, 
-        // Define o comportamento da rolagem como suave (smooth)
         behavior: 'smooth' 
     });
 });
@@ -47,3 +44,57 @@ document.getElementById('perfil').addEventListener('click', function() {
     });
 
   });
+
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const track = document.querySelector('.slider-track');
+    const slides = Array.from(document.querySelectorAll('.slide'));
+    const prevButton = document.querySelector('.anterior');
+    const nextButton = document.querySelector('.proximo');
+
+    let currentSlide = 0;
+
+    function updateSlider() {
+      const slideWidth = slides[0] ? slides[0].offsetWidth : 0;
+      if (slideWidth === 0) return; 
+        const offset = -currentSlide * slideWidth;
+        track.style.transform = `translateX(${offset}px)`;
+        updateIndicators();
+    }
+
+    function nextSlide() {
+        if (currentSlide < slides.length - 1) {
+            currentSlide++;
+        } else {
+            currentSlide = 0; 
+        }
+        updateSlider();
+    }
+
+    function prevSlide() {
+        if (currentSlide > 0) {
+            currentSlide--;
+        } else {
+            currentSlide = slides.length - 1; 
+        }
+        updateSlider();
+    }
+    
+    if (nextButton) nextButton.addEventListener('click', nextSlide);
+    if (prevButton) prevButton.addEventListener('click', prevSlide);
+    
+    const indicators = document.querySelectorAll('.opcoes span');
+    
+    function updateIndicators() {
+        indicators.forEach((indicator, index) => {
+            indicator.classList.remove('active');
+            if (index === currentSlide) {
+                indicator.classList.add('active');
+            }
+        });
+    }
+
+    window.addEventListener('resize', updateSlider);
+
+    updateSlider();
+});

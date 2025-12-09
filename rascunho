@@ -1,3 +1,5 @@
+/* Rascunhos do projeto */
+
 <section id="certificacoes">
     <h1 id="tit-cert">
         <i class="fa-solid fa-award"></i> Certificações
@@ -50,4 +52,42 @@
 }
 .info-cert p {
     font-size: 1rem;
+}
+
+/* Estilos para telas maiores */
+
+@media screen and (min-width: 768px) {
+  main {
+    grid-template-columns: auto 300px 1fr auto;
+  }
+
+  section#ficha {
+    grid-column: 2 / 3;
+    height: fit-content;
+    position: sticky;
+    top: 65px;
+  }
+
+  section#detalhes {
+    grid-column: 3 / 4;
+  }
+
+  #skill-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #projeto-container .projeto {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  #projeto-container .projeto-info {
+    max-width: 80%;
+  }
+
+  #projeto-container .foto {
+    aspect-ratio: 1/1;
+    max-width: 20%;
+    max-height: 200px;
+  }
 }
