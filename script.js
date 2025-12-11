@@ -45,56 +45,44 @@ document.getElementById('perfil').addEventListener('click', function() {
 
   });
 
+  /* Mudar o tema da página */
+  
+const botao = document.getElementById('botao-tema');
+const body = document.body;
 
-  document.addEventListener('DOMContentLoaded', () => {
-    const track = document.querySelector('.slider-track');
-    const slides = Array.from(document.querySelectorAll('.slide'));
-    const prevButton = document.querySelector('.anterior');
-    const nextButton = document.querySelector('.proximo');
+// Persistência do tema
+const temasalvo = localStorage.getItem('tema');
+temaClaro(temasalvo === 'claro');
 
-    let currentSlide = 0;
+// Função para alternar entre tema claro e escuro
+function temaClaro(ativar) {
+  if (ativar === true) {
+    body.classList.add('claro');
+    botao.innerHTML = '<i class="fa-solid fa-moon"></i>';
+  } else {
+    body.classList.remove('claro');
+    botao.innerHTML = '<i class="fa-solid fa-sun"></i>';
+  }
+}
 
-    function updateSlider() {
-      const slideWidth = slides[0] ? slides[0].offsetWidth : 0;
-      if (slideWidth === 0) return; 
-        const offset = -currentSlide * slideWidth;
-        track.style.transform = `translateX(${offset}px)`;
-        updateIndicators();
+botao.addEventListener('click', () => {
+  const isClaro = body.classList.toggle('claro');
+  temaClaro(isClaro);
+  localStorage.setItem('tema', isClaro ? 'claro' : 'escuro');
+});
+// Scroll suave para links de navegação
+const navLinks = document.querySelectorAll('#menu ul a.link');
+navLinks.forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      const headerHeight = document.querySelector('header').offsetHeight;
+      const targetPosition = target.offsetTop - headerHeight - 20;
+      window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth'
+      });
     }
-
-    function nextSlide() {
-        if (currentSlide < slides.length - 1) {
-            currentSlide++;
-        } else {
-            currentSlide = 0; 
-        }
-        updateSlider();
-    }
-
-    function prevSlide() {
-        if (currentSlide > 0) {
-            currentSlide--;
-        } else {
-            currentSlide = slides.length - 1; 
-        }
-        updateSlider();
-    }
-    
-    if (nextButton) nextButton.addEventListener('click', nextSlide);
-    if (prevButton) prevButton.addEventListener('click', prevSlide);
-    
-    const indicators = document.querySelectorAll('.opcoes span');
-    
-    function updateIndicators() {
-        indicators.forEach((indicator, index) => {
-            indicator.classList.remove('active');
-            if (index === currentSlide) {
-                indicator.classList.add('active');
-            }
-        });
-    }
-
-    window.addEventListener('resize', updateSlider);
-
-    updateSlider();
+  });
 });
