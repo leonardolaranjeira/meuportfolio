@@ -40,12 +40,15 @@
             <h3>OLÁ, MEU NOME É LEONARDO!</h3>
             <h1>Desenvolvedor Fullstack</h1>
             <p>Sou desenvolvedor e estudante autodidata, gosto de práticar e divulgar meus projetos novos neste portifólio e em meu Github!</p>
-            <div id="video">
-
-            </div>
-            <div id="curriculo">
-                <p>Currículo profissional: </p>
-                <a href="arquivos/curriculo_leonardo.pdf" download="Leonardo_Laranjeira_CV.pdf" target="_blank">DOWNLOAD</a>
+            <div id="biografia">
+                <div id="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/vl0eatPehLs?si=0b_dedMoGzdmeJxW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <!--Este ainda não é o vídeo oficial-->
+                </div>
+                <div id="curriculo">
+                    <p>Currículo profissional: </p>
+                    <a href="arquivos/curriculo_leonardo.pdf" download="Leonardo_Laranjeira_CV.pdf" target="_blank">DOWNLOAD</a>
+                </div>
             </div>
         </section>
 
@@ -53,7 +56,7 @@
             <h1 id="tit-proj">
                 <i class="fa-solid fa-list-check"></i> Projetos
             </h1>
-            <aside>
+            <aside id="container-projetos">
                 <div id="projeto-container">
                     <div class="imagem-projeto">
                         <img src="img/projetos/projeto-login.png" alt="Foto do projeto">
@@ -96,217 +99,201 @@
             <h1>
                 <i class="fa-solid fa-book"></i> Habilidades
             </h1>
-            <aside class="skill-container">
-                <h2>Hard Skills</h2>
-
-                <div class="info">
-                    <span class="skill">
-                        <i class="fa-solid fa-code"></i> HTML 5
-                    </span>
-                    <span class="level">
-                        70%
-                    </span>
+                <div id="cont-skill">
+                    <aside class="skill-container">
+                        <h2>Hard Skills</h2>
+                        <div class="info">
+                            <span class="skill">
+                                <i class="fa-solid fa-code"></i> HTML 5
+                            </span>
+                            <span class="level">
+                                70%
+                            </span>
+                        </div>
+                        <div class="barra">
+                            <div class="progresso" style="width: 70%;"></div>
+                        </div>
+                        <div class="info">
+                            <span class="skill">
+                                <i class="fa-solid fa-code"></i> CSS 3
+                            </span>
+                            <span class="level">
+                                80%
+                            </span>
+                        </div>
+                        <div class="barra">
+                            <div class="progresso" style="width: 80%;"></div>
+                        </div>
+                        <div class="info">
+                            <span class="skill">
+                                <i class="fa-solid fa-code"></i> JAVASCRIPT
+                            </span>
+                            <span class="level">
+                                30%
+                            </span>
+                        </div>
+                        <div class="barra">
+                            <div class="progresso" style="width: 30%;"></div>
+                        </div>
+                        <div class="info">
+                            <span class="skill">
+                                <i class="fa-solid fa-code"></i> PYTHON 3
+                            </span>
+                            <span class="level">
+                                40%
+                            </span>
+                        </div>
+                        <div class="barra">
+                            <div class="progresso" style="width: 40%;"></div>
+                        </div>
+                        <div class="info">
+                            <span class="skill">
+                                <i class="fa-solid fa-code"></i> LÓGICA DE PROGRAMAÇÃO
+                            </span>
+                            <span class="level">
+                                90%
+                            </span>
+                        </div>
+                        <div class="barra">
+                            <div class="progresso" style="width: 90%;"></div>
+                        </div>
+                        <div class="info">
+                            <span class="skill">
+                                <i class="fa-solid fa-code"></i> JAVA
+                            </span>
+                            <span class="level">
+                                50%
+                            </span>
+                        </div>
+                        <div class="barra">
+                            <div class="progresso" style="width: 50%;"></div>
+                        </div>
+                        <div class="info">
+                            <span class="skill">
+                                <i class="fa-solid fa-code"></i> GIT / GITHUB
+                            </span>
+                            <span class="level">
+                                80%
+                            </span>
+                        </div>
+                        <div class="barra">
+                            <div class="progresso" style="width: 80%;"></div>
+                        </div>
+                        <div class="info">
+                            <span class="skill">
+                                <i class="fa-solid fa-code"></i> ARQUITETURA DE SOFTWARE
+                            </span>
+                            <span class="level">
+                                90%
+                            </span>
+                        </div>
+                        <div class="barra">
+                            <div class="progresso" style="width: 90%;"></div>
+                        </div>
+                    </aside>
+                    <aside class="skill-container">
+                        <h2>Soft Skills</h2>
+                        <div class="info">
+                            <span class="skill">
+                                <i class="fa-solid fa-cloud"></i> INTELIGÊNCIA EMOCIONAL
+                            </span>
+                            <span class="level">
+                                90%
+                            </span>
+                        </div>
+                        <div class="barra">
+                            <div class="progresso" style="width: 90%;"></div>
+                        </div>
+                        <div class="info">
+                            <span class="skill">
+                                <i class="fa-solid fa-cloud"></i> RESOLUÇÃO DE PROBLEMAS
+                            </span>
+                            <span class="level">
+                                90%
+                            </span>
+                        </div>
+                        <div class="barra">
+                            <div class="progresso" style="width: 90%;"></div>
+                        </div>
+                        <div class="info">
+                            <span class="skill">
+                                <i class="fa-solid fa-cloud"></i> TRABALHO EM EQUIPE
+                            </span>
+                            <span class="level">
+                                80%
+                            </span>
+                        </div>
+                        <div class="barra">
+                            <div class="progresso" style="width: 80%;"></div>
+                        </div>
+                        <div class="info">
+                            <span class="skill">
+                                <i class="fa-solid fa-cloud"></i> RACIOCÍNIO LÓGICO
+                            </span>
+                            <span class="level">
+                                100%
+                            </span>
+                        </div>
+                        <div class="barra">
+                            <div class="progresso" style="width: 100%;"></div>
+                        </div>
+                        <div class="info">
+                            <span class="skill">
+                                <i class="fa-solid fa-cloud"></i> GESTÃO DO TEMPO
+                            </span>
+                            <span class="level">
+                                80%
+                            </span>
+                        </div>
+                        <div class="barra">
+                            <div class="progresso" style="width: 80%;"></div>
+                        </div>
+                        <div class="info">
+                            <span class="skill">
+                                <i class="fa-solid fa-cloud"></i> FLEXIBILIDADE
+                            </span>
+                            <span class="level">
+                                90%
+                            </span>
+                        </div>
+                        <div class="barra">
+                            <div class="progresso" style="width: 90%;"></div>
+                        </div>
+                        <div class="info">
+                            <span class="skill">
+                                <i class="fa-solid fa-cloud"></i> RESILIÊNCIA
+                            </span>
+                            <span class="level">
+                                90%
+                            </span>
+                        </div>
+                        <div class="barra">
+                            <div class="progresso" style="width: 90%;"></div>
+                        </div>
+                        <div class="info">
+                            <span class="skill">
+                                <i class="fa-solid fa-cloud"></i> AUTODIDATA
+                            </span>
+                            <span class="level">
+                                100%
+                            </span>
+                        </div>
+                        <div class="barra">
+                            <div class="progresso" style="width: 100%;"></div>
+                        </div>
+                        <div class="info">
+                            <span class="skill">
+                                <i class="fa-solid fa-cloud"></i> ORGANIZAÇÃO
+                            </span>
+                            <span class="level">
+                                100%
+                            </span>
+                        </div>
+                        <div class="barra">
+                            <div class="progresso" style="width: 100%;"></div>
+                        </div>
+                    </aside>
                 </div>
-                <div class="barra">
-                    <div class="progresso" style="width: 70%;"></div>
-                </div>
-
-                <div class="info">
-                    <span class="skill">
-                        <i class="fa-solid fa-code"></i> CSS 3
-                    </span>
-                    <span class="level">
-                        80%
-                    </span>
-                </div>
-                <div class="barra">
-                    <div class="progresso" style="width: 80%;"></div>
-                </div>
-
-                <div class="info">
-                    <span class="skill">
-                        <i class="fa-solid fa-code"></i> JAVASCRIPT
-                    </span>
-                    <span class="level">
-                        30%
-                    </span>
-                </div>
-                <div class="barra">
-                    <div class="progresso" style="width: 30%;"></div>
-                </div>
-
-                <div class="info">
-                    <span class="skill">
-                        <i class="fa-solid fa-code"></i> PYTHON 3
-                    </span>
-                    <span class="level">
-                        40%
-                    </span>
-                </div>
-                <div class="barra">
-                    <div class="progresso" style="width: 40%;"></div>
-                </div>
-
-                <div class="info">
-                    <span class="skill">
-                        <i class="fa-solid fa-code"></i> LÓGICA DE PROGRAMAÇÃO
-                    </span>
-                    <span class="level">
-                        90%
-                    </span>
-                </div>
-                <div class="barra">
-                    <div class="progresso" style="width: 90%;"></div>
-                </div>
-
-                <div class="info">
-                    <span class="skill">
-                        <i class="fa-solid fa-code"></i> JAVA
-                    </span>
-                    <span class="level">
-                        50%
-                    </span>
-                </div>
-                <div class="barra">
-                    <div class="progresso" style="width: 50%;"></div>
-                </div>
-
-                <div class="info">
-                    <span class="skill">
-                        <i class="fa-solid fa-code"></i> GIT / GITHUB
-                    </span>
-                    <span class="level">
-                        80%
-                    </span>
-                </div>
-                <div class="barra">
-                    <div class="progresso" style="width: 80%;"></div>
-                </div>
-
-                <div class="info">
-                    <span class="skill">
-                        <i class="fa-solid fa-code"></i> ARQUITETURA DE SOFTWARE
-                    </span>
-                    <span class="level">
-                        90%
-                    </span>
-                </div>
-                <div class="barra">
-                    <div class="progresso" style="width: 90%;"></div>
-                </div>
-            </aside>
-
-            <aside class="skill-container">
-                <h2>Soft Skills</h2>
-
-                <div class="info">
-                    <span class="skill">
-                        <i class="fa-solid fa-cloud"></i> INTELIGÊNCIA EMOCIONAL
-                    </span>
-                    <span class="level">
-                        90%
-                    </span>
-                </div>
-                <div class="barra">
-                    <div class="progresso" style="width: 90%;"></div>
-                </div>
-
-                <div class="info">
-                    <span class="skill">
-                        <i class="fa-solid fa-cloud"></i> RESOLUÇÃO DE PROBLEMAS
-                    </span>
-                    <span class="level">
-                        90%
-                    </span>
-                </div>
-                <div class="barra">
-                    <div class="progresso" style="width: 90%;"></div>
-                </div>
-
-                <div class="info">
-                    <span class="skill">
-                        <i class="fa-solid fa-cloud"></i> TRABALHO EM EQUIPE
-                    </span>
-                    <span class="level">
-                        80%
-                    </span>
-                </div>
-                <div class="barra">
-                    <div class="progresso" style="width: 80%;"></div>
-                </div>
-
-                <div class="info">
-                    <span class="skill">
-                        <i class="fa-solid fa-cloud"></i> RACIOCÍNIO LÓGICO
-                    </span>
-                    <span class="level">
-                        100%
-                    </span>
-                </div>
-                <div class="barra">
-                    <div class="progresso" style="width: 100%;"></div>
-                </div>
-
-                <div class="info">
-                    <span class="skill">
-                        <i class="fa-solid fa-cloud"></i> GESTÃO DO TEMPO
-                    </span>
-                    <span class="level">
-                        80%
-                    </span>
-                </div>
-                <div class="barra">
-                    <div class="progresso" style="width: 80%;"></div>
-                </div>
-
-                <div class="info">
-                    <span class="skill">
-                        <i class="fa-solid fa-cloud"></i> FLEXIBILIDADE
-                    </span>
-                    <span class="level">
-                        90%
-                    </span>
-                </div>
-                <div class="barra">
-                    <div class="progresso" style="width: 90%;"></div>
-                </div>
-
-                <div class="info">
-                    <span class="skill">
-                        <i class="fa-solid fa-cloud"></i> RESILIÊNCIA
-                    </span>
-                    <span class="level">
-                        90%
-                    </span>
-                </div>
-                <div class="barra">
-                    <div class="progresso" style="width: 90%;"></div>
-                </div>
-
-                <div class="info">
-                    <span class="skill">
-                        <i class="fa-solid fa-cloud"></i> AUTODIDATA
-                    </span>
-                    <span class="level">
-                        100%
-                    </span>
-                </div>
-                <div class="barra">
-                    <div class="progresso" style="width: 100%;"></div>
-                </div>
-
-                <div class="info">
-                    <span class="skill">
-                        <i class="fa-solid fa-cloud"></i> ORGANIZAÇÃO
-                    </span>
-                    <span class="level">
-                        100%
-                    </span>
-                </div>
-                <div class="barra">
-                    <div class="progresso" style="width: 100%;"></div>
-                </div>
-            </aside>
         </section>
 
         <section id="formacao">
@@ -335,7 +322,6 @@
 
             <div class="slider-container">
                 <div class="slider-track">
-
                     <aside class="slide">
                         <div class="certificado">
                             <img src="img/certificados/mund1-python3.png" alt="Certificação Python 3">
@@ -359,7 +345,6 @@
                             </div>
                         </div>
                     </aside>
-
                 </div>
             </div>
             
@@ -403,28 +388,25 @@
             <h1>
                 <i class="fa-solid fa-mobile-screen-button"></i> Contato
             </h1>
-            <aside id="formulario-container">
-                <div id="top-bar">
-                    <i class="fa-solid fa-window-minimize"></i> <i class="fa-solid fa-expand"></i> <i class="fa-solid fa-xmark"></i>
-                </div>
-                <div>
-                    <div id="formulario">
-                        <form action="https://formspree.io/f/xdkqzynq" method="post" autocomplete="off" id="formulario-itens">
-                            <span>ENTRAR EM CONTATO COMIGO!</span>
-
-                            <label for="nome">NOME</label>
-                            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required minlength="3">
-
-                            <label for="email">EMAIL</label>
-                            <input type="email" id="email" name="email" placeholder="Digite seu email" required>
-
-                            <label for="mensagem">MENSAGEM</label>
-                            <textarea id="mensagem" name="mensagem" rows="4" placeholder="Digite sua mensagem" required minlength="10"></textarea>
-
-                            <input type="text" name="_gotcha" style="display:none;" tabindex="-1" autocomplete="off"> <!-- Honeypot -->
-
-                            <button type="submit" id="botao">ENVIAR</button>
-                        </form>
+            <aside>
+                <div id="formulario-container">
+                    <div id="top-bar">
+                        <i class="fa-solid fa-window-minimize"></i> <i class="fa-solid fa-expand"></i> <i class="fa-solid fa-xmark"></i>
+                    </div>
+                    <div>
+                        <div id="formulario">
+                            <form action="https://formspree.io/f/xdkqzynq" method="post" autocomplete="off" id="formulario-itens">
+                                <span>ENTRAR EM CONTATO COMIGO!</span>
+                                <label for="nome">NOME</label>
+                                <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required minlength="3">
+                                <label for="email">EMAIL</label>
+                                <input type="email" id="email" name="email" placeholder="Digite seu email" required>
+                                <label for="mensagem">MENSAGEM</label>
+                                <textarea id="mensagem" name="mensagem" rows="4" placeholder="Digite sua mensagem" required minlength="10"></textarea>
+                                <input type="text" name="_gotcha" style="display:none;" tabindex="-1" autocomplete="off"> <!-- Honeypot -->
+                                <button type="submit" id="botao">ENVIAR</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </aside>
