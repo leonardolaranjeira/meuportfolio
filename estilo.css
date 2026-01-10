@@ -78,6 +78,7 @@ a {
 header {
     display: flex;
     background-color: var(--cor-fundo);
+    justify-content: flex-end;
     align-items: center;
     padding: 10px 20px;
     min-height: 60px;
@@ -116,6 +117,19 @@ header {
     transform: scale(0.98);
 }
 
+.opcoes {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 15px;
+}
+.opcoes a {
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    color: var(--cor-fonte);
+    padding: 20px; 
+}
+
 #menu {
     display: flex;  
     justify-content: space-between;
@@ -123,7 +137,7 @@ header {
     width: 100%;
     z-index: 10001;
 }
-#menu ul {
+#menu ul.ancoras {
     display: flex;
     flex-direction: column;
     list-style: none;
@@ -132,6 +146,7 @@ header {
     top: 60px;
     left: 0px;
     width: 100%;
+    align-items: center;
     height: calc(100vh - 60px);
     overflow-y: auto;
     opacity: 0;
@@ -142,7 +157,11 @@ header {
 
     -webkit-overflow-scrolling: touch;
 }
-#menu > ul > li:last-child {
+ul.ancoras li {
+    margin: 30px 0px;
+}
+
+#menu > ul.ancoras > li:last-child {
     padding-bottom: 60px; 
 }
 
@@ -155,7 +174,7 @@ header {
     }
 }
 
-body.mobile-menu #menu ul {
+body.mobile-menu #menu ul.ancoras {
     opacity: 1;
     width: 100%;
     visibility: visible;
@@ -164,7 +183,7 @@ body.mobile-menu #menu ul {
 body.mobile-menu {
     overflow: hidden;
 }
-#menu > ul > li {
+#menu > ul.ancoras > li {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -174,11 +193,22 @@ body.mobile-menu {
 #menu > ul > li:active {
     color: var(--cor-titulo);
 }
-#menu > ul > li > a {
+#menu > ul.ancoras > li > a {
     font-family: "Open Sans", sans-serif;
     font-size: 20px;
     color: var(--cor-fonte);
 }
+#menu ul.ancoras li a.ativo {
+    color: var(--cor-titulo) !important;
+    font-weight: bold;
+}
+@media (min-width: 1200px) {
+    #menu ul.ancoras li a.ativo {
+        border-bottom: 2px solid var(--cor-titulo);
+        padding-bottom: 5px;
+    }
+}
+
 #menu .menu-botoes {
     display: flex;
     align-items: center;
@@ -503,6 +533,7 @@ main {
     grid-column: 2 / 3;
     gap: 20px;
     scroll-margin-top: 70px;
+    margin-bottom: 50px;
 }
 #formacoes-container {
     display: grid;
@@ -542,6 +573,7 @@ main {
     grid-column: 2 / 3;
     gap: 15px;
     scroll-margin-top: 70px;
+    margin-bottom: 50px;
 }
 #certificacoes .slider-container {
     overflow: hidden;
@@ -635,7 +667,7 @@ main {
     grid-column: 2 / 3;
     gap: 20px;
     scroll-margin-top: 70px;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
 #contato aside {
     display: flex;
@@ -761,6 +793,10 @@ footer p {
         font-size: 16px;
     }
 
+    header {
+        padding: 0px 50px;
+    }
+
     #apresentacao h1 {
         font-size: 32px;
     }
@@ -785,18 +821,50 @@ footer p {
         transform: scale(0.98);
     }
 
+    #bars_menu {
+        display: none !important;
+    }
+
+    #menu ul.ancoras {
+        display: flex;
+        flex-direction: row; 
+        position: static;   
+        height: auto;
+        width: auto;
+        opacity: 1;
+        visibility: visible;
+        background-color: transparent;
+        padding: 0;
+        overflow: visible;
+    }
+
+    #menu > ul.ancoras > li {
+        padding: 0 15px; 
+    }
+
+    #menu > ul.ancoras > li:last-child {
+        padding-bottom: 0;
+    }
+
+    body.mobile-menu {
+        overflow: auto;
+    }
+
     main {
         grid-template-columns: 1fr minmax(auto, 1200px) 1fr;
     }
 
     #menu a {
-    transition: color 0.3s ease, transform 0.3s ease;
+        transform: translateY(-3px);
+        transition: color 0.3s ease, transform 0.3s ease;
     }
     #menu a:hover {
         color: var(--cor-titulo);
-        transform: translateY(-3px);
     }
-    #menu > ul > li:hover {
+    ul.ancoras > li {
+        margin: 0px;
+    }
+    #menu > ul.ancoras > li:hover {
         color: var(--cor-titulo);
     }
 

@@ -6,6 +6,25 @@ document.getElementById('perfil').addEventListener('click', function() {
     });
 });
 
+document.querySelectorAll('#menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      const isMenuOpen = document.body.classList.contains('mobile-menu');
+      if (isMenuOpen && window.innerWidth < 1200) {
+            mobileNavToogle();
+        }
+    });
+});
+
+window.addEventListener('resize', () => {
+    if (window.innerWidth >= 1200) {
+        if (document.body.classList.contains('mobile-menu')) {
+            document.body.classList.remove('mobile-menu');
+            mobileNav.classList.remove('fechar');
+            mobileNav.classList.add('listar');
+            mobileNav.setAttribute('aria-expanded', 'false');
+        }
+    }
+});
 
 // Menu mobile
 const mobileNav = document.querySelector('#bars_menu');
@@ -20,16 +39,6 @@ function mobileNavToogle() {
 if (mobileNav) {
   mobileNav.addEventListener('click', mobileNavToogle);
 }
-
-// Menu escondido
-document.querySelectorAll('#menu a').forEach(menu => {
-  menu.addEventListener('click', () => {
-    if (document.querySelector('#bars_menu')) {
-      mobileNavToogle();
-    }
-  });
-
-});
 
 /* Mudar o tema da página */
 const botao = document.getElementById('botao-tema');
@@ -101,5 +110,30 @@ const swiperCertificados = new Swiper('.certificados-slider', {
   },
 });
 
-// Os scripts contidos neste arquivo foram estudados e praticados com base em curso e documentalções dedicadas ao Javascript, DOM, Swiper.js e boas práticas de desenvolvimento web.
+const links = document.querySelectorAll('#menu ul.ancoras a');
+const secoes = document.querySelectorAll('section[id], div[id]'); 
+
+function scrollSpy() {
+    const topoJanela = window.pageYOffset + 100;
+
+    secoes.forEach(secao => {
+        const secaoTopo = secao.offsetTop;
+        const secaoAltura = secao.offsetHeight;
+        const id = secao.getAttribute('id');
+
+        if (topoJanela >= secaoTopo && topoJanela < secaoTopo + secaoAltura) {
+            links.forEach(link => {
+                link.classList.remove('ativo');
+                if (link.getAttribute('href') === `#${id}`) {
+                    link.classList.add('ativo');
+                }
+            });
+        }
+    });
+}
+
+window.addEventListener('scroll', scrollSpy);
+window.addEventListener('load', scrollSpy);
+
+// Os scripts contidos neste arquivo foram estudados e praticados com base em curso e documentações dedicadas ao Javascript, DOM, Swiper.js e boas práticas de desenvolvimento web.
 // Usei nomenclaturas em inglês e algumas em português para identificação de pontos onde preciso praticar e entender mais sobre cada tópico abordado.

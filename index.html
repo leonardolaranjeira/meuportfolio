@@ -17,22 +17,29 @@
                 <img src="img/minhafoto.jpeg" alt="Foto de perfil">
                 <span>Leonardo Laranjeira</span>
             </button>
-            <div class="menu-botoes">
-                <button type="button" id="bars_menu" class="interacao" aria-controls="menu-lateral" aria-expanded="false">
-                        <i class="fa-solid fa-bars"></i>
-                </button>
-                <button class="interacao" id="botao-tema" aria-label="Mudar tema da página">
-                    <i class="fa-solid fa-moon"></i>
-                </button>
+            <div class="opcoes">
+                <div class="menu-botoes">
+                    <button type="button" id="bars_menu" class="interacao" aria-controls="menu-lateral" aria-expanded="false">
+                            <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+                            
+                <ul class="ancoras">
+                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#habilidades">Habilidades</a></li>
+                    <li><a href="#formacao">Formação</a></li>
+                    <li><a href="#certificacoes">Certificação</a></li>
+                    <li><a href="#experiencia">Experiência</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            
+
+                <div id="tema">
+                    <button class="interacao" id="botao-tema" aria-label="Mudar tema da página">
+                        <i class="fa-solid fa-moon"></i>
+                    </button>
+                </div>
             </div>
-            <ul>
-                <li><a href="#projetos">Projetos</a></li>
-                <li><a href="#habilidades">Habilidades</a></li>
-                <li><a href="#formacao">Formação</a></li>
-                <li><a href="#certificacoes">Certificação</a></li>
-                <li><a href="#experiencia">Experiência</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
         </nav>
     </header>
 
@@ -536,6 +543,19 @@
                             </aside>
                         </div>
 
+                        <div class="swiper-slide">
+                            <aside class="slide-cert">
+                                <div class="certificado">
+                                    <img src="img/certificados/certificado-html-css.png" alt="Certificação HTML5 e CSS3">
+                                </div>
+                                <div class="info-cert">
+                                    <h2>HTML5 e CSS3</h2>
+                                    <p>Este curso foi um marco na minha trajetória, pois me proporcionou a base técnica necessária para construir meu portfólio pessoal e me preparou para enfrentar os desafios de futuros projetos.</p>
+                                    <span>40 HORAS</span>
+                                </div>
+                            </aside>
+                        </div>
+
                     </div>
                     <div class="swiper-pagination-cert"></div>
                 </div>
@@ -609,11 +629,10 @@
     <script>
     var typed = new Typed('#typed', {
         strings: [
-            'Desenvolvedor de software',
-            'Desenvolvedor Fullstack',
+            'Desenvolvedor de Software',
+            'Desenvolvedor Full Stack',
             'Desenvolvedor Backend',
-            'Estudante Autodidata',
-            'UX Designer',
+            'Estudante autodidata',
         ],
         typeSpeed: 50,
         backSpeed: 30,      
