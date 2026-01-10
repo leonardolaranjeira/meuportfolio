@@ -667,7 +667,7 @@ main {
     grid-column: 2 / 3;
     gap: 20px;
     scroll-margin-top: 70px;
-    margin-bottom: 50px;
+    margin-bottom: 120px;
 }
 #contato aside {
     display: flex;
