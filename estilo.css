@@ -667,7 +667,7 @@ main {
     grid-column: 2 / 3;
     gap: 20px;
     scroll-margin-top: 70px;
-    margin-bottom: 120px;
+    margin-bottom: 80px;
 }
 #contato aside {
     display: flex;
@@ -816,6 +816,15 @@ footer p {
 }
 
 @media screen and (min-width: 1200px) {
+    #perfil:hover {
+        background-color: var(--cor-off-fundo);
+        transform: scale(1);
+    }
+    #perfil:hover span {
+        color: var(--cor-titulo);
+        transform: scale(0.98);
+    }
+
     #menu .interacao:hover {
         color: var(--cor-titulo);
         transform: scale(0.98);
@@ -899,6 +908,10 @@ footer p {
         border-left: 12px solid var(--destaque);
         transform: translateY(-5px);
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #contato {
+        margin-bottom: 120px;
     }
 
     #botao:hover {
